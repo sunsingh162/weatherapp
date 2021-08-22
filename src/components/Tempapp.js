@@ -4,12 +4,12 @@ import './css/style.css';
 
 const Tempapp = () => {
 
-    const [city, setCity]=useState(null);
-    const [search, setSearch]=useState(null);
+    const [city, setCity]=useState("");
+    const [search, setSearch]=useState("");
 
     useEffect (() => {
         const fetchApi= async () => {
-            const url=` http://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=666a205b93d5cea801b1a4f4b70c3d51`;
+            const url=`https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=666a205b93d5cea801b1a4f4b70c3d51`;
             const response =await fetch(url);
             const resJson=await response.json();
             console.log(resJson);

@@ -5,7 +5,7 @@ import './css/style.css';
 const Tempapp = () => {
 
     const [city, setCity]=useState(null);
-    const [search, setSearch]=useState("Bangalore");
+    const [search, setSearch]=useState(null);
 
     useEffect (() => {
         const fetchApi= async () => {
